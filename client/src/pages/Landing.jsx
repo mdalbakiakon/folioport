@@ -21,10 +21,10 @@ const Landing = () => {
         <div className="flex-3 flex flex-col gap-3.5 justify-center items-start">
           <div className="flex flex-col">
             <h2 className="text-(--txt-sec)">Services</h2>
-            <span>Full Stack Software Engineer</span>
-            <span>MERN Stack</span>
-            <span>FrontEnd Development</span>
-            <span>UI/UX</span>
+            <span>Full Stack Web Development (MERN)</span>
+            <span>Frontend Engineering</span>
+            <span>Backend & API Development</span>
+            <span>UI/UX Design</span>
             <span>Product Design</span>
           </div>
           <div className="flex flex-col">
