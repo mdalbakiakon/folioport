@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@import "lenis/dist/lenis.css";
+
+/* custom font */
+@font-face {
+  font-family: "micro";
+  src: url("fonts/Micro.woff2") format("woff2");
+}
+
+/* ui */
+:root {
+  --bg-main-col: #000000;
+  --txt-main-col: #d3d3d3;
+}
+
+@theme {
+  /* head font */
+  --font-head: "micro", sans-serif;
+}
+
+body {
+  background: var(--bg-main-col);
+}
+
+.font-head-style {
+  font-family: var(--font-head);
+  font-size: 136px;
+  line-height: 116px;
+  letter-spacing: -9px;
+}
