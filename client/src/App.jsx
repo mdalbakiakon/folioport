@@ -1,6 +1,6 @@
 import { ReactLenis } from "lenis/react";
 import React from "react";
-import Second from "./pages/Second";
+import Landing from "./pages/Landing";
 
 const App = () => {
   return (
@@ -9,7 +9,7 @@ const App = () => {
       <ReactLenis root />
 
       <main>
-        <Second />
+        <Landing />
       </main>
     </>
   );

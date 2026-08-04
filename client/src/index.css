@@ -1,16 +1,10 @@
 @import "tailwindcss";
-@import "lenis/dist/lenis.css";
 
 /* custom font */
 @font-face {
   font-family: "micro";
   src: url("fonts/Micro.woff2") format("woff2");
-}
-
-/* ui */
-:root {
-  --bg-main-col: #000000;
-  --txt-main-col: #d3d3d3;
+  font-display: swap;
 }
 
 @theme {
@@ -18,13 +12,37 @@
   --font-head: "micro", sans-serif;
 }
 
-body {
-  background: var(--bg-main-col);
+/* ui */
+:root {
+  --bg-main: #000000;
+  --txt-main: #d3d3d3;
+  --txt-sec: #313133;
 }
 
+body {
+  background: var(--bg-main);
+  color: var(--txt-main);
+  font-family: "Share Tech Mono", monospace;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+section {
+  width: 100%;
+  min-height: 100dvh;
+  padding: 5px 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* font style for the header tag */
 .font-head-style {
   font-family: var(--font-head);
+  color: var(--txt-main);
+  user-select: none;
+  -webkit-user-select: none;
   font-size: 136px;
-  line-height: 116px;
+  line-height: 120px;
   letter-spacing: -9px;
 }
