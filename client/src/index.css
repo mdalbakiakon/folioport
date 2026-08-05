@@ -10,6 +10,9 @@
 @theme {
   /* head font */
   --font-head: "micro", sans-serif;
+
+  /* body font */
+  --font-body: "Share Tech Mono", monospace;
 }
 
 /* ui */

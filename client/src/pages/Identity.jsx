@@ -17,28 +17,28 @@ const Identity = () => {
       {/* hero section */}
       <div className="w-full h-fit flex justify-between items-start gap-2.5 px-1.25">
         <img
-          src="/dp.jpg"
+          src="/dp.webp"
           alt="Md. Al Baki Akon - Full Stack Software Engineer"
           loading="eager"
           className="w-30 aspect-square rounded-3xl object-center object-cover -scale-x-100 select-none"
         />
-        <div className="flex-1 select-none">Md. Al Baki Akon</div>
+        <div className="flex-1">Md. Al Baki Akon</div>
         <div className="flex-3 flex flex-col gap-3.5 justify-center items-start">
-          <div className="flex flex-col select-none">
-            <h2 className="text-(--txt-sec)">Services</h2>
+          <div className="flex flex-col text-(--txt-sec)">
+            <h2 className="text-(--txt-main) select-none">Services</h2>
             <span>Full Stack Web Development (MERN)</span>
             <span>Frontend Engineering</span>
             <span>Backend & API Development</span>
             <span>UI/UX Design</span>
             <span>Product Design</span>
           </div>
-          <div className="flex flex-col">
-            <h2 className="text-(--txt-sec)">Also</h2>
+          <div className="flex flex-col text-(--txt-sec)">
+            <h2 className="text-(--txt-main) select-none">Also</h2>
             <span>AI Research</span>
           </div>
         </div>
         <div className="flex-1 text-(--txt-sec) text-right">
-          <span className="font-head text-lg text-(--txt-ter)">{currYear}</span>
+          <span className="font-head text-lg text-(--txt-ter) leading-[0.75]">{currYear}</span>
         </div>
       </div>
     </section>

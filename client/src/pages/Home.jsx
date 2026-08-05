@@ -1,6 +1,7 @@
 import React from "react";
 import Work from "./Archive";
 import Identity from "./Identity";
+import Archive from "./Archive";
 
 const Home = () => {
   return (
@@ -25,7 +26,7 @@ const Home = () => {
         </p>
       </section>
       
-      <Work />
+      <Archive />
     </>
   );
 };

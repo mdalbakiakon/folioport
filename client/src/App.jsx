@@ -7,11 +7,15 @@ import Archive from "./pages/Archive";
 import Identity from "./pages/Identity";
 
 const App = () => {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem("baki-portfolio-theme") || "dark";
+  });
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("baki-portfolio-theme", theme);
   }, [theme]);
+
 
   const handleThemeDark = () => {
     theme === "light" ? setTheme("dark") : "";
