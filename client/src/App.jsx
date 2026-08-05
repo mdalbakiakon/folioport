@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import { Routes, Route } from "react-router-dom";
-import Work from "./pages/Work";
+import Archive from "./pages/Archive";
 import Identity from "./pages/Identity";
 
 const App = () => {
@@ -35,7 +35,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/identity" element={<Identity />} />
-          <Route path="/work" element={<Work />} />
+          <Route path="/archive" element={<Archive />} />
         </Routes>
       </main>
     </>

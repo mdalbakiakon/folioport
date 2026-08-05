@@ -1,8 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Sun, Moon } from "lucide-react";
 
 const Navbar = ({ handleThemeDark, handleThemeLight, theme }) => {
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+  const isIdentity = location.pathname === "/identity";
+  const isArchive = location.pathname === "/archive";
+
   return (
     <header className="sticky top-0 bg-(--bg-main) w-full h-19.5 flex flex-col justify-center items-center z-50">
       <div className="w-[calc(100%-20px)] mx-auto  border-b-2 border-(--txt-ter) flex justify-center items-center">
@@ -15,17 +20,17 @@ const Navbar = ({ handleThemeDark, handleThemeLight, theme }) => {
         </Link>
       </div>
       <div className="w-[calc(100%-20px)] mx-auto border-b-2 border-(--txt-ter) py-1.25 flex justify-center items-center relative">
-        <div className="flex justify-center items-center gap-2.5 text-(--txt-sec)">
-          <Link to="/" className="hover:text-(--txt-main)">
+        <nav className="flex justify-center items-center gap-3.5 text-(--txt-sec)">
+          <Link to="/" className={`${isHome ? "text-(--txt-main)" : ""} hover:text-(--txt-main)`}>
             Home
           </Link>
-          <Link to="/identity" className="hover:text-(--txt-main)">
+          <Link to="/identity" className={`${isIdentity ? "text-(--txt-main)" : ""} hover:text-(--txt-main)`}>
             Identity
           </Link>
-          <Link to="/work" className="hover:text-(--txt-main)">
-            Work
+          <Link to="/archive" className={`${isArchive ? "text-(--txt-main)" : ""} hover:text-(--txt-main)`}>
+            Archive
           </Link>
-        </div>
+        </nav>
 
         <div className="absolute right-0 top-0 h-full flex justify-center items-center gap-x-1.25 p-px">
           <Sun
