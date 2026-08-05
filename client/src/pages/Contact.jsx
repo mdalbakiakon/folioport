@@ -1,21 +1,17 @@
-import { GitCommit } from "lucide-react";
 import React from "react";
 import { useLocation } from "react-router-dom";
-import Research from "../components/Research";
 
-const Archive = () => {
+const Contact = () => {
   const location = useLocation();
   const isHome = location.pathname === "/";
   return (
     <section>
       <h2 className="font-head-style text-left">
-        {isHome ? "Builds" : "Archive"}
+        {isHome ? "Find us" : "Contact"}
       </h2>
 
-      {/* research section */}
-      <Research />
     </section>
   );
 };
 
-export default Archive;
+export default Contact;

@@ -7,6 +7,8 @@ const Navbar = ({ handleThemeDark, handleThemeLight, theme }) => {
   const isHome = location.pathname === "/";
   const isIdentity = location.pathname === "/identity";
   const isArchive = location.pathname === "/archive";
+  const isTestimonials = location.pathname === "/testimonials";
+  const isContact = location.pathname === "/contact";
 
   return (
     <header className="sticky top-0 bg-(--bg-main) w-full h-19.5 flex flex-col justify-center items-center z-50">
@@ -30,17 +32,23 @@ const Navbar = ({ handleThemeDark, handleThemeLight, theme }) => {
           <Link to="/archive" className={`${isArchive ? "text-(--txt-main)" : ""} hover:text-(--txt-main)`}>
             Archive
           </Link>
+          <Link to="/testimonials" className={`${isTestimonials ? "text-(--txt-main)" : ""} hover:text-(--txt-main)`}>
+            Testimonials
+          </Link>
+          <Link to="/contact" className={`${isContact ? "text-(--txt-main)" : ""} hover:text-(--txt-main)`}>
+            Contact
+          </Link>
         </nav>
 
         <div className="absolute right-0 top-0 h-full flex justify-center items-center gap-x-1.25 p-px">
           <Sun
             onClick={handleThemeLight}
-            className={`h-2/3 ${theme === "light" ? "text-(--txt-main)" : "text-(--txt-sec)"}`}
+            className={`h-2/3 cursor-pointer ${theme === "light" ? "text-(--txt-main)" : "text-(--txt-sec)"}`}
             fill={theme === "light" ? "#000000" : "none"}
           />
           <Moon
             onClick={handleThemeDark}
-            className={`h-2/3 ${theme === "dark" ? "text-(--txt-main)" : "text-(--txt-sec)"}`}
+            className={`h-2/3 cursor-pointer ${theme === "dark" ? "text-(--txt-main)" : "text-(--txt-sec)"}`}
             fill={theme === "dark" ? "#d3d3d3" : "none"}
           />
         </div>

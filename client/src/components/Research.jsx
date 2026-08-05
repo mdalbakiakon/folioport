@@ -13,14 +13,14 @@ const Research = () => {
               in large language models. It replaces the need for two separate
               models with a single LoRA adapter, and introduces per-question
               dynamic alpha contrast tuning instead of a static alpha weight,
-              thus improving both accuracy by 38.7% and memory efficiency.
+              thus improving both accuracy by 38.70% and memory efficiency.
             </p>
           </div>
           <div className="flex flex-col">
             <h2 className="text-(--txt-main) select-none">Title</h2>
             <span className="text-(--txt-sec)">
               A-RICD: Adapter-based Resource-efficient Induce-then-Contrast
-              Decoding for Reducing Hallucinations in Large Language Models
+              Decoding for Reducing Hallucinations in Large Language Models.
             </span>
           </div>
         </div>
@@ -44,18 +44,26 @@ const Research = () => {
           </span>
         </h2>
 
-        <div className="flex justify-between items-center w-full">
-          <div className="flex justify-center items-start gap-2.5 text-right">
+        <div className="flex justify-between items-center w-full gap-5">
+          <div className="flex justify-center items-start text-left">
             <span className="font-head text-(--txt-ter) select-none text-[136px] leading-30 tracking-[-9px]">
-              46.32
+              46
             </span>
-            <span className="font-body text-(--txt-sec)">% Baseline</span>
+            <span className="font-body text-(--txt-sec)">.32% Baseline</span>
           </div>
-          <div className="flex justify-center items-start gap-2.5 text-right">
-            <span className="font-head text-(--txt-main) select-none text-[136px] leading-30 tracking-[-9px]">
-              64.26
+
+          <div className="flex-1 flex justify-start items-start text-left">
+            <span className="font-head text-(--txt-ter) select-none text-[136px] leading-30 tracking-[-9px]">
+              64
             </span>
-            <span className="font-body">% A-RICD</span>
+            <span className="font-body text-(--txt-sec)">.26% A-RICD NIA (Ours)</span>
+          </div>
+
+          <div className="flex justify-center items-start text-right">
+            <span className="font-head text-(--txt-main) select-none text-[136px] leading-30 tracking-[-9px]">
+              38
+            </span>
+            <span className="font-body">.70% Improvement</span>
           </div>
         </div>
       </div>

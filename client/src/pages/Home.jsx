@@ -2,8 +2,11 @@ import React from "react";
 import Work from "./Archive";
 import Identity from "./Identity";
 import Archive from "./Archive";
+import Contact from "./Contact";
+import Copyright from "../components/Copyright";
+import Testimonials from "./Testimonials";
 
-const Home = () => {
+const Home = ({ theme }) => {
   return (
     <>
       <Identity />
@@ -25,8 +28,29 @@ const Home = () => {
           they are experienced.
         </p>
       </section>
-      
+
       <Archive />
+
+      {/* building since */}
+      <section className="flex flex-col justify-center items-center">
+        <h3 className="font-head text-center text-3xl text-(--txt-ter) leading-[0.75]">
+          2022
+        </h3>
+        <h4 className="text-(--txt-main)">Since</h4>
+      </section>
+
+      <Testimonials />
+
+      {/* branding */}
+      <section className="flex flex-col justify-center items-center">
+        <img
+          src={theme === "dark" ? "/logo-dark.svg" : "/logo-light.svg"}
+          alt="Portfolio Logo"
+          className="w-12.5"
+        />
+      </section>
+
+      <Contact />
     </>
   );
 };
