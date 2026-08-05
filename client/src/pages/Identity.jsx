@@ -34,7 +34,7 @@ const Identity = () => {
           </div>
           <div className="flex flex-col text-(--txt-sec)">
             <h2 className="text-(--txt-main) select-none">Also</h2>
-            <span>AI Research</span>
+            <span>AI/ML Research</span>
           </div>
         </div>
         <div className="flex-1 text-(--txt-sec) text-right">
