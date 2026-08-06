@@ -4,7 +4,7 @@ const Research = () => {
   return (
     <>
       <div className="w-full h-fit flex justify-between items-start gap-2.5 px-1.25">
-        <div className="flex-1">LLM Research</div>
+        <div className="flex-1 text-left">LLM Research</div>
         <div className="flex-3 flex flex-col gap-3.5 justify-center items-start">
           <div className="flex flex-col">
             <h2 className="text-(--txt-main) select-none">Outline</h2>
@@ -36,7 +36,7 @@ const Research = () => {
       </div>
 
       {/* research performance */}
-      <div className="my-25 w-full h-fit flex flex-col justify-center items-start gap-2.5 px-1.25">
+      <div className="mt-25 w-full h-fit flex flex-col justify-center items-start gap-2.5 px-1.25">
         <h2>
           Case Performance{" "}
           <span className="text-(--txt-sec)">

@@ -5,11 +5,11 @@ const Contact = () => {
   const location = useLocation();
   const isHome = location.pathname === "/";
   return (
-    <section>
+    <section className="flex flex-col">
       <h2 className="font-head-style text-left">
         {isHome ? "Find us" : "Contact"}
       </h2>
-
+      
     </section>
   );
 };

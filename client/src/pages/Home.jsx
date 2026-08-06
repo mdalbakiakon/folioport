@@ -15,11 +15,11 @@ const Home = ({ theme }) => {
       {/* portfolio version */}
       <section className="flex flex-col justify-start items-center">
         <div className="flex flex-col justify-center items-center">
-          <h2 className="font-head text-center text-3xl text-(--txt-ter) leading-[0.75]">
+          <h2 className="font-head text-center text-3xl text-(--txt-ter)">
             8.0
           </h2>
           <h3 className="text-(--txt-main)">Portfolio Mark</h3>
-          <p className="mt-2.5 text-(--txt-sec) w-full max-w-7xl mx-auto text-center">
+          <p className="mt-3.5 text-(--txt-sec) w-full max-w-7xl mx-auto text-center">
             I am a Full Stack Software Engineer specializing in the MERN stack,
             with a dedicated focus on architecting clean, scalable, and
             performant web applications from initial concept through deployment.
@@ -56,6 +56,8 @@ const Home = ({ theme }) => {
       </section>
 
       <Contact />
+
+      <Copyright />
     </>
   );
 };

@@ -1,18 +1,16 @@
 import { ReactLenis } from "lenis/react";
 import React, { useEffect, useState } from "react";
 import Home from "./pages/Home";
-import Navbar from "./components/Navbar";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Archive from "./pages/Archive";
 import Identity from "./pages/Identity";
 import Contact from "./pages/Contact";
 import Copyright from "./components/Copyright";
 import Testimonials from "./pages/Testimonials";
+import PageNotFound from "./pages/PageNotFound";
+import Layout from "./pages/Layout";
 
 const App = () => {
-  const location = useLocation();
-  const isHome = location.pathname === "/";
-
   const [theme, setTheme] = useState(() => {
     return localStorage.getItem("baki-portfolio-theme") || "dark";
   });
@@ -34,23 +32,27 @@ const App = () => {
     <>
       {/* lenis scroll */}
       <ReactLenis root />
-      <Navbar
-        handleThemeDark={handleThemeDark}
-        handleThemeLight={handleThemeLight}
-        theme={theme}
-      />
-
       <main>
         <Routes>
-          <Route path="/" element={<Home theme={theme} />} />
-          <Route path="/identity" element={<Identity />} />
-          <Route path="/archive" element={<Archive />} />
-          <Route path="/testimonials" element={<Testimonials />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route
+            element={
+              <Layout
+                handleThemeDark={handleThemeDark}
+                handleThemeLight={handleThemeLight}
+                theme={theme}
+              />
+            }
+          >
+            <Route path="/" element={<Home theme={theme} />} />
+            <Route path="/identity" element={<Identity />} />
+            <Route path="/archive" element={<Archive />} />
+            <Route path="/testimonials" element={<Testimonials />} />
+            <Route path="/contact" element={<Contact />} />
+          </Route>
+
+          <Route path="*" element={<PageNotFound theme={theme}/>} />
         </Routes>
       </main>
-
-      {isHome ? <Copyright /> : ""}
     </>
   );
 };
