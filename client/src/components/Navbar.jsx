@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Sun, Moon } from "lucide-react";
+import { Sun, Moon, GamepadDirectional } from "lucide-react";
 
 const Navbar = ({ handleThemeDark, handleThemeLight, theme }) => {
   const location = useLocation();
@@ -12,7 +12,7 @@ const Navbar = ({ handleThemeDark, handleThemeLight, theme }) => {
 
   return (
     <header className="sticky top-0 bg-(--bg-main) w-full h-19.5 flex flex-col justify-center items-center z-50">
-      <div className="w-[calc(100%-20px)] mx-auto  border-b-2 border-(--txt-ter) flex justify-center items-center">
+      <div className="w-[calc(100%-20px)] h-full mx-auto  border-b-2 border-(--txt-ter) flex justify-center items-center">
         <Link to="/">
           <img
             src={theme === "dark" ? "/logo-dark.svg" : "/logo-light.svg"}
@@ -21,8 +21,9 @@ const Navbar = ({ handleThemeDark, handleThemeLight, theme }) => {
           />
         </Link>
       </div>
-      <div className="w-[calc(100%-20px)] mx-auto border-b-2 border-(--txt-ter) py-1.25 flex justify-center items-center relative">
-        <nav className="flex justify-center items-center gap-3.5 text-(--txt-sec)">
+
+      <div className="w-[calc(100%-20px)] h-9 mx-auto border-b-2 border-(--txt-ter) py-1.25 flex justify-center items-center relative">
+        <nav className="flex justify-center items-center gap-3.5 text-(--txt-sec) max-[529px]:hidden ">
           <Link to="/" className={`${isHome ? "text-(--txt-main)" : ""} hover:text-(--txt-main)`}>
             Home
           </Link>
@@ -33,12 +34,14 @@ const Navbar = ({ handleThemeDark, handleThemeLight, theme }) => {
             Archive
           </Link>
           <Link to="/testimonials" className={`${isTestimonials ? "text-(--txt-main)" : ""} hover:text-(--txt-main)`}>
-            Testimonials
+            Honor
           </Link>
           <Link to="/contact" className={`${isContact ? "text-(--txt-main)" : ""} hover:text-(--txt-main)`}>
             Contact
           </Link>
         </nav>
+
+        <span className="h-full flex justify-center items-center min-[529px]:hidden"><GamepadDirectional className="h-full text-(--txt-sec) hover:rotate-45 duration-700 ease-in-out transition-all"/></span>
 
         <div className="absolute right-0 top-0 h-full flex justify-center items-center gap-x-1.25 p-px">
           <Sun

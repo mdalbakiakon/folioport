@@ -14,8 +14,8 @@ const Home = ({ theme }) => {
 
       {/* portfolio version */}
       <section className="flex flex-col justify-start items-center">
-        <div className="flex flex-col justify-center items-center">
-          <h2 className="font-head text-center text-3xl text-(--txt-ter)">
+        <div className="flex flex-col justify-center items-center p-1.25">
+          <h2 className="font-head text-center text-3xl text-(--txt-ter) max-[439px]:text-base">
             8.0
           </h2>
           <h3 className="text-(--txt-main)">Portfolio Mark</h3>
@@ -38,7 +38,7 @@ const Home = ({ theme }) => {
 
       {/* building since */}
       <section className="flex flex-col justify-center items-center">
-        <h2 className="font-head text-center text-3xl text-(--txt-ter) leading-[0.75]">
+        <h2 className="font-head text-center text-3xl text-(--txt-ter) leading-[0.75] max-[439px]:text-base">
           2022
         </h2>
         <h3 className="text-(--txt-main)">Since</h3>
@@ -51,7 +51,7 @@ const Home = ({ theme }) => {
         <img
           src={theme === "dark" ? "/logo-dark.svg" : "/logo-light.svg"}
           alt="Portfolio Logo"
-          className="w-12.5"
+          className="w-7.5 py-1.25"
         />
       </section>
 

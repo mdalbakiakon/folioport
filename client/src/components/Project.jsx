@@ -2,8 +2,8 @@ import React from "react";
 
 const Project = () => {
   return (
-    <div className="w-full h-100 px-1.25 flex justify-center items-center gap-1.25">
-      <div className="h-full flex-1 hover:flex-[1.5] transition-all duration-700 ease-in-out rounded-4xl overflow-hidden relative cursor-pointer group">
+    <div className="w-full h-100 px-1.25 flex justify-center items-center gap-1.25 max-[909px]:flex-col">
+      <div className="h-full flex-1 w-full hover:flex-[1.5] transition-all duration-700 ease-in-out rounded-4xl overflow-hidden relative cursor-pointer group">
         <img
           src="/interior_main.jpg"
           alt=""
@@ -25,7 +25,7 @@ const Project = () => {
       </div>
 
       {/* 2nd project */}
-      <div className="h-full flex-1 hover:flex-[1.5] transition-all duration-700 ease-in-out rounded-4xl overflow-hidden relative cursor-pointer group">
+      <div className="h-full w-full flex-1 hover:flex-[1.5] transition-all duration-700 ease-in-out rounded-4xl overflow-hidden relative cursor-pointer group">
         <img
           src="https://designshack.net/wp-content/uploads/Dark-MacBook-Mockup-1024x682.jpg"
           alt=""

@@ -11,7 +11,7 @@ const PageNotFound = ({theme}) => {
         <img
           src={theme === "dark" ? "/logo-dark.svg" : "/logo-light.svg"}
           alt="Portfolio Logo"
-          className="w-12.5"
+          className="w-7.5 py-1.25"
         />
       </div>
     </div>

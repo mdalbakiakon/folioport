@@ -11,11 +11,18 @@ const Identity = () => {
     <section>
       {/* section head tag */}
       <h1 className="font-head-style text-left">
-        {isHome ? "Portfolio Website" : "Identity"}
+        {isHome ? (
+          <>
+            Portfolio <br />
+            Website
+          </>
+        ) : (
+          "Identity"
+        )}
       </h1>
 
       {/* hero section */}
-      <div className="w-full h-fit flex justify-between items-start gap-2.5 px-1.25">
+      <div className="w-full h-fit flex justify-between items-start gap-2.5 px-1.25 rank-container">
         <img
           src="/dp.webp"
           alt="Md. Al Baki Akon - Full Stack Software Engineer"
@@ -37,8 +44,10 @@ const Identity = () => {
             <span>AI/ML Research</span>
           </div>
         </div>
-        <div className="flex-1 text-(--txt-sec) text-right">
-          <span className="font-head text-lg text-(--txt-ter) leading-[0.75]">{currYear}</span>
+        <div className="flex-1 text-(--txt-sec) text-right max-[909px]:hidden">
+          <span className="font-head text-lg text-(--txt-ter) leading-[0.75]">
+            {currYear}
+          </span>
         </div>
       </div>
     </section>

@@ -6,6 +6,7 @@ import {
   PolarAngleAxis,
   PolarRadiusAxis,
   ResponsiveContainer,
+  Text,
 } from "recharts";
 
 const skillData = [
@@ -17,16 +18,35 @@ const skillData = [
   { skill: "System Design", value: 70 },
 ];
 
+const CustomTick = ({ x, y, cx, cy, payload, textAnchor }) => {
+  const dy = y > cy ? 10 : y < cy ? -4 : 0;
+
+  return (
+    <Text
+      x={x}
+      y={y + dy}
+      width={55}
+      fill="var(--txt-sec)"
+      fontSize={12}
+      textAnchor={textAnchor}
+      verticalAnchor="middle"
+    >
+      {payload.value}
+    </Text>
+  );
+};
+
 const SkillHexagon = () => {
   return (
-    <div className="w-full h-100 mt-10 outline-none focus:outline-none **:outline-none">
+    <div className="w-full h-100 px-1.25 outline-none focus:outline-none **:outline-none flex justify-center items-center">
       <ResponsiveContainer width="100%" height="100%">
-        <RadarChart data={skillData}>
+        <RadarChart
+          data={skillData}
+          outerRadius="75%"
+          margin={{ top: 15, right: 5, bottom: 30, left: 5 }}
+        >
           <PolarGrid stroke="var(--txt-ter)" />
-          <PolarAngleAxis
-            dataKey="skill"
-            tick={{ fill: "var(--txt-sec)", fontSize: 12 }}
-          />
+          <PolarAngleAxis dataKey="skill" tick={<CustomTick />} />
           <PolarRadiusAxis
             angle={30}
             domain={[0, 100]}

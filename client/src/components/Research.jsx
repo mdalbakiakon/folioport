@@ -3,7 +3,7 @@ import React from "react";
 const Research = () => {
   return (
     <>
-      <div className="w-full h-fit flex justify-between items-start gap-2.5 px-1.25">
+      <div className="w-full h-fit flex justify-between items-start gap-2.5 px-1.25 rank-container">
         <div className="flex-1 text-left">LLM Research</div>
         <div className="flex-3 flex flex-col gap-3.5 justify-center items-start">
           <div className="flex flex-col">
@@ -44,23 +44,23 @@ const Research = () => {
           </span>
         </h2>
 
-        <div className="flex justify-between items-center w-full gap-5">
+        <div className="rank-container flex justify-between items-center w-full h-fit gap-5">
           <div className="flex justify-center items-start text-left">
-            <span className="font-head text-(--txt-ter) select-none text-[136px] leading-30 tracking-[-9px]">
+            <span className="font-head-number text-(--txt-ter)">
               46
             </span>
             <span className="font-body text-(--txt-sec)">.32% Baseline</span>
           </div>
 
           <div className="flex-1 flex justify-start items-start text-left">
-            <span className="font-head text-(--txt-ter) select-none text-[136px] leading-30 tracking-[-9px]">
+            <span className="font-head-number text-(--txt-ter)">
               64
             </span>
             <span className="font-body text-(--txt-sec)">.26% A-RICD NIA (Ours)</span>
           </div>
 
-          <div className="flex justify-center items-start text-right">
-            <span className="font-head text-(--txt-main) select-none text-[136px] leading-30 tracking-[-9px]">
+          <div className="flex justify-center items-start text-right up-gap">
+            <span className="font-head-number text-(--txt-main)">
               38
             </span>
             <span className="font-body">.70% Improvement</span>

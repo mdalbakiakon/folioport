@@ -7,7 +7,7 @@ const Testimonials = () => {
   return (
     <section>
       <h1 className="font-head-style text-left">
-        {isHome ? "Reputation" : "Testimonials"}
+        {isHome ? "dignity" : "Honor"}
       </h1>
     </section>
   );
