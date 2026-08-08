@@ -9,6 +9,7 @@ import Copyright from "./components/Copyright";
 import Honor from "./pages/Honor";
 import PageNotFound from "./pages/PageNotFound";
 import Layout from "./pages/Layout";
+import ScrollToTop from "./components/ScrolltoTop";
 
 const App = () => {
   const [theme, setTheme] = useState(() => {
@@ -32,6 +33,7 @@ const App = () => {
     <>
       {/* lenis scroll */}
       <ReactLenis root />
+      <ScrollToTop />
       <main>
         <Routes>
           <Route

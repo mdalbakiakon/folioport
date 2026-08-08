@@ -80,6 +80,10 @@ section {
   letter-spacing: -9px;
 }
 
+.project-description{
+    font-size: 14px;
+  }
+
 
 
 
@@ -159,6 +163,10 @@ section {
   body{
     font-size: 14px;
   }
+
+  .project-description{
+    font-size: 12px;
+  }
 }
 
 @media screen and (max-width: 439px) {
@@ -174,5 +182,9 @@ section {
   
   body{
     font-size: 12px;
+  }
+  
+  .project-description{
+    font-size: 10px;
   }
 }

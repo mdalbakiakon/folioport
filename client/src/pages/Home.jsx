@@ -49,9 +49,19 @@ const Home = ({ theme }) => {
       {/* branding */}
       <section className="flex flex-col justify-center items-center">
         <img
-          src={theme === "dark" ? "/logo-dark.svg" : "/logo-light.svg"}
+          src="/logo-light.svg"
           alt="Portfolio Logo"
-          className="w-7.5 py-1.25"
+          className={`absolute w-7.5 py-1.25 transition-opacity duration-750 ease-in-out ${
+            theme === "dark" ? "opacity-0" : "opacity-100"
+          }`}
+        />
+
+        <img
+          src="/logo-dark.svg"
+          alt="Portfolio Logo"
+          className={`absolute w-7.5 py-1.25 transition-opacity duration-750 ease-in-out ${
+            theme === "dark" ? "opacity-100" : "opacity-0"
+          }`}
         />
       </section>
 
