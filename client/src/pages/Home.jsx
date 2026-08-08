@@ -4,7 +4,7 @@ import Identity from "./Identity";
 import Archive from "./Archive";
 import Contact from "./Contact";
 import Copyright from "../components/Copyright";
-import Testimonials from "./Testimonials";
+import Honor from "./Honor";
 import SkillHexagon from "../components/SkillHexagon";
 
 const Home = ({ theme }) => {
@@ -44,7 +44,7 @@ const Home = ({ theme }) => {
         <h3 className="text-(--txt-main)">Since</h3>
       </section>
 
-      <Testimonials />
+      <Honor />
 
       {/* branding */}
       <section className="flex flex-col justify-center items-center">

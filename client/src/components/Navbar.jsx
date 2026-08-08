@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Sun, Moon, GamepadDirectional } from "lucide-react";
+import MobileNav from "./MobileNav";
 
 const Navbar = ({ handleThemeDark, handleThemeLight, theme }) => {
   const location = useLocation();
   const isHome = location.pathname === "/";
   const isIdentity = location.pathname === "/identity";
   const isArchive = location.pathname === "/archive";
-  const isTestimonials = location.pathname === "/testimonials";
+  const isHonor = location.pathname === "/honor";
   const isContact = location.pathname === "/contact";
+
+  const [isMenuClick, setIsMenuClick] = useState(false)
+
+  const handleMobileMenu = () => {
+    isMenuClick === false ? setIsMenuClick(true) : setIsMenuClick(false);
+  }
 
   return (
     <header className="sticky top-0 bg-(--bg-main) w-full h-19.5 flex flex-col justify-center items-center z-50">
@@ -33,7 +40,7 @@ const Navbar = ({ handleThemeDark, handleThemeLight, theme }) => {
           <Link to="/archive" className={`${isArchive ? "text-(--txt-main)" : ""} hover:text-(--txt-main)`}>
             Archive
           </Link>
-          <Link to="/testimonials" className={`${isTestimonials ? "text-(--txt-main)" : ""} hover:text-(--txt-main)`}>
+          <Link to="/honor" className={`${isHonor ? "text-(--txt-main)" : ""} hover:text-(--txt-main)`}>
             Honor
           </Link>
           <Link to="/contact" className={`${isContact ? "text-(--txt-main)" : ""} hover:text-(--txt-main)`}>
@@ -41,7 +48,11 @@ const Navbar = ({ handleThemeDark, handleThemeLight, theme }) => {
           </Link>
         </nav>
 
-        <span className="h-full flex justify-center items-center min-[529px]:hidden"><GamepadDirectional className="h-full text-(--txt-sec) hover:rotate-45 duration-700 ease-in-out transition-all"/></span>
+        <button onClick={handleMobileMenu} className="h-full flex justify-center items-center min-[529px]:hidden"><GamepadDirectional className={`h-full text-(--txt-sec) duration-700 ease-in-out transition-all ${isMenuClick === true ? "rotate-45" : ""}`}/></button>
+
+        {isMenuClick && (
+          <MobileNav isHome={isHome} isIdentity={isIdentity} isArchive={isArchive} isHonor={isHonor} isContact={isContact} handleMobileMenu={handleMobileMenu}/>
+        )}
 
         <div className="absolute right-0 top-0 h-full flex justify-center items-center gap-x-1.25 p-px">
           <Sun

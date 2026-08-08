@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 
-const Testimonials = () => {
+const Honor = () => {
   const location = useLocation();
   const isHome = location.pathname === "/";
   return (
@@ -13,4 +13,4 @@ const Testimonials = () => {
   );
 };
 
-export default Testimonials;
+export default Honor;

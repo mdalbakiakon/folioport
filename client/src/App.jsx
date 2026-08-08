@@ -6,7 +6,7 @@ import Archive from "./pages/Archive";
 import Identity from "./pages/Identity";
 import Contact from "./pages/Contact";
 import Copyright from "./components/Copyright";
-import Testimonials from "./pages/Testimonials";
+import Honor from "./pages/Honor";
 import PageNotFound from "./pages/PageNotFound";
 import Layout from "./pages/Layout";
 
@@ -46,7 +46,7 @@ const App = () => {
             <Route path="/" element={<Home theme={theme} />} />
             <Route path="/identity" element={<Identity />} />
             <Route path="/archive" element={<Archive />} />
-            <Route path="/testimonials" element={<Testimonials />} />
+            <Route path="/honor" element={<Honor />} />
             <Route path="/contact" element={<Contact />} />
           </Route>
 
