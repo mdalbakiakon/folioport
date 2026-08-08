@@ -6,10 +6,15 @@ import Contact from "./Contact";
 import Copyright from "../components/Copyright";
 import Honor from "./Honor";
 import SkillHexagon from "../components/SkillHexagon";
+import SEO from "../components/SEO";
+import { SEO_CONFIG } from "../config/seo.js";
 
 const Home = ({ theme }) => {
   return (
     <>
+      {/* seo */}
+      <SEO {...SEO_CONFIG.home} theme={theme}/>
+
       <Identity />
 
       {/* portfolio version */}
@@ -33,9 +38,7 @@ const Home = ({ theme }) => {
 
         <SkillHexagon />
       </section>
-
       <Archive />
-
       {/* building since */}
       <section className="flex flex-col justify-center items-center">
         <h2 className="font-head text-center text-3xl text-(--txt-ter) leading-[0.75] max-[439px]:text-base">
@@ -43,9 +46,7 @@ const Home = ({ theme }) => {
         </h2>
         <h3 className="text-(--txt-main)">Since</h3>
       </section>
-
       <Honor />
-
       {/* branding */}
       <section className="flex flex-col justify-center items-center">
         <img
@@ -64,9 +65,7 @@ const Home = ({ theme }) => {
           }`}
         />
       </section>
-
       <Contact />
-
       <Copyright />
     </>
   );
