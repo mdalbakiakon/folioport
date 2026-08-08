@@ -1,11 +1,8 @@
 import React from "react";
-import SEO from "../components/SEO";
-import { SEO_CONFIG } from "../config/seo.js";
 
 const PageNotFound = ({ theme }) => {
   return (
     <>
-      <SEO {...SEO_CONFIG.notFound} />
       <div className="w-full h-dvh p-1.25 relative">
         <h1 className="font-head-style text-left">404</h1>
         <h2 className="px-1.25">Page not found</h2>

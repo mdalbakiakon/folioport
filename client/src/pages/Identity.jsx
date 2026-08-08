@@ -1,17 +1,14 @@
 import React from "react";
 import dayjs from "dayjs";
 import { useLocation } from "react-router-dom";
-import SEO from "../components/SEO";
-import { SEO_CONFIG } from "../config/seo.js";
 
-const Identity = () => {
+const Identity = ({theme}) => {
   const now = dayjs();
   const currYear = now.format("YYYY");
   const location = useLocation();
   const isHome = location.pathname === "/";
   return (
     <>
-      <SEO {...SEO_CONFIG.identity} />
       <section>
         {/* section head tag */}
         <h1 className="font-head-style text-left">

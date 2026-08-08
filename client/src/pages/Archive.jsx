@@ -3,15 +3,12 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import Research from "../components/Research";
 import Project from "../components/Project";
-import SEO from "../components/SEO";
-import { SEO_CONFIG } from "../config/seo.js";
 
-const Archive = () => {
+const Archive = ({theme}) => {
   const location = useLocation();
   const isHome = location.pathname === "/";
   return (
     <>
-      <SEO {...SEO_CONFIG.archive} />
       <section>
         <h2 className="font-head-style text-left">
           {isHome ? "Builds" : "Archive"}
