@@ -7,13 +7,7 @@ const ScrollToTop = () => {
   const lenis = useLenis();
 
   useEffect(() => {
-    if (!lenis) return;
-
-    lenis.scrollTo(0, {
-      immediate: true,
-    });
-
-    window.scrollTo(0, 0);
+    lenis?.scrollTo(0, { immediate: true });
   }, [pathname, lenis]);
 
   return null;

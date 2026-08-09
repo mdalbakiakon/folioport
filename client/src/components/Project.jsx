@@ -3,7 +3,7 @@ import React from "react";
 const Project = () => {
   return (
     <div className="w-full h-fit px-1.25 flex justify-center items-center gap-1 [@media(hover:none)]:flex-col">
-      <div className="h-100 [@media(hover:none)]:h-75 flex-1 w-full hover:flex-2 transition-all duration-750 ease-in-out rounded-4xl overflow-hidden cursor-pointer group sticky top-22">
+      <div className="h-100 [@media(hover:none)]:h-75 flex-1 w-full hover:flex-2 transition-[flex-grow] will-change-[flex-grow] duration-750 ease-in-out rounded-4xl overflow-hidden cursor-pointer group sticky top-22">
         <img
           src="/interior_main.jpg"
           alt=""
@@ -25,7 +25,7 @@ const Project = () => {
       </div>
 
       {/* 2nd project */}
-      <div className="h-100 [@media(hover:none)]:h-75 w-full flex-1 hover:flex-2 transition-all duration-750 ease-in-out rounded-4xl overflow-hidden cursor-pointer group sticky top-22 z-30">
+      <div className="h-100 [@media(hover:none)]:h-75 w-full flex-1 hover:flex-2 transition-[flex-grow] will-change-[flex-grow] duration-750 ease-in-out rounded-4xl overflow-hidden cursor-pointer group sticky top-22 z-30">
         <img
           src="https://designshack.net/wp-content/uploads/Dark-MacBook-Mockup-1024x682.jpg"
           alt=""

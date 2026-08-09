@@ -43,7 +43,7 @@ const Navbar = ({ handleThemeDark, handleThemeLight, theme }) => {
       </div>
 
       <div className="w-[calc(100%-20px)] h-9 mx-auto border-b-2 border-(--txt-ter) py-1.25 flex justify-center items-center relative">
-        <nav className="flex justify-center items-center gap-3.5 text-(--txt-sec) max-[529px]:hidden ">
+        <nav className="flex justify-center items-center gap-4.5 text-(--txt-sec) max-[529px]:hidden ">
           <Link
             to="/"
             className={`${isHome ? "text-(--txt-main)" : ""} hover:text-(--txt-main)`}
