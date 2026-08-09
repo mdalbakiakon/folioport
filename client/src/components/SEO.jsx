@@ -7,6 +7,12 @@ const AUTHOR_NAME = "Md. Al Baki Akon";
 const DEFAULT_IMAGE = `${SITE_URL}/dp.webp`;
 const DEFAULT_IMAGE_ALT = "Md. Al Baki Akon — Full Stack Software Engineer";
 
+const SAME_AS = [
+  "https://github.com/mdalbakiakon",
+  "https://www.linkedin.com/in/md-al-baki-akon-352989362/",
+  "https://x.com/baki_dev8131",
+];
+
 const SEO = ({
   title,
   description,
@@ -58,6 +64,20 @@ const SEO = ({
       element.setAttribute("href", href);
     };
 
+    // Helper for JSON-LD structured data script
+    const setJsonLd = (id, data) => {
+      let element = document.head.querySelector(`script[data-jsonld="${id}"]`);
+
+      if (!element) {
+        element = document.createElement("script");
+        element.type = "application/ld+json";
+        element.setAttribute("data-jsonld", id);
+        document.head.appendChild(element);
+      }
+
+      element.textContent = JSON.stringify(data);
+    };
+
     // Basic SEO
     setMeta("name", "description", description);
     setMeta("name", "author", AUTHOR_NAME);
@@ -99,6 +119,20 @@ const SEO = ({
     setMeta("name", "twitter:image", image);
     setMeta("name", "twitter:image:alt", imageAlt);
 
+    // Person schema — only makes sense on the homepage/about page,
+    // not on every sub-page (blog posts etc. would get their own type)
+    if (cleanPath === "/") {
+      setJsonLd("person", {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        name: AUTHOR_NAME,
+        url: SITE_URL,
+        image,
+        jobTitle: "Full Stack Software Engineer",
+        description,
+        sameAs: SAME_AS,
+      });
+    }
   }, [
     title,
     description,
@@ -109,6 +143,7 @@ const SEO = ({
     theme,
     noindex,
     keywords,
+    cleanPath,
   ]);
 
   return <>{children}</>;

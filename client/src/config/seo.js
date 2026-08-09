@@ -8,6 +8,8 @@ export const SEO_CONFIG = {
     path: "/",
     keywords: [
       "Md. Al Baki Akon",
+      "md. al baki akon",
+      "mdalbakiakon",
       "Al Baki Akon",
       "Full Stack Software Engineer",
       "Full Stack Developer",
@@ -30,6 +32,8 @@ export const SEO_CONFIG = {
     path: "/identity",
     keywords: [
       "Md. Al Baki Akon",
+      "md. al baki akon",
+      "mdalbakiakon",
       "Al Baki Akon",
       "About Md. Al Baki Akon",
       "Software Engineer Background",
