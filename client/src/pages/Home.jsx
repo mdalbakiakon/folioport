@@ -38,11 +38,24 @@ const Home = ({ theme }) => {
 
         <SkillHexagon />
       </section>
-      
+
       <Archive />
 
       {/* branding */}
-      <section className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center h-[calc(100dvh-78px)] p-2.5">
+        <div className="w-full h-full rounded-4xl xl:rounded-[50px] overflow-hidden relative">
+          <img
+            src="/branding.jpg"
+            alt="Md. Al Baki Akon - Portfolio Branding Image"
+            loading="lazy"
+            decoding="async"
+            className="w-full h-full object-center object-cover"
+          />
+
+          {/* overlay */}
+          <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(to_bottom,transparent_0%,#121212_100%)]"></div>
+        </div>
+
         <img
           src="/logo-light.svg"
           alt="Portfolio Logo"
@@ -58,7 +71,7 @@ const Home = ({ theme }) => {
             theme === "dark" ? "opacity-100" : "opacity-0"
           }`}
         />
-      </section>
+      </div>
 
       <Honor />
 
