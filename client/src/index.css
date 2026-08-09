@@ -3,7 +3,13 @@
 /* custom font */
 @font-face {
   font-family: "micro";
-  src: url("/fonts/Micro.woff2") format("woff2");
+  src: url("/fonts/micro.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "body";
+  src: url("/fonts/wr.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -12,29 +18,31 @@
   --font-head: "micro", sans-serif;
 
   /* body font */
-  --font-body: "Share Tech Mono", monospace;
+  --font-body: "body", monospace;
 }
 
 /* ui */
 :root[data-theme="dark"] {
-  --bg-main: #000000;
+  --bg-main: #121212;
   --txt-main: #d3d3d3;
-  --txt-sec: #525256;
-  --txt-ter: #313131;
+  --txt-sec: #606060;
+  --txt-ter: #404040;
+  --font-weight: 900;
 }
 
 :root[data-theme="light"] {
   --bg-main: #ffffff;
-  --txt-main: #000000;
+  --txt-main: #121212;
   --txt-sec: #8b8b8f;
   --txt-ter: #e9e9eb;
+  --font-weight: 900;
 }
 
 body {
   background: var(--bg-main);
   color: var(--txt-main);
-  font-family: "Share Tech Mono", monospace;
-  font-weight: 600;
+  font-family: var(--font-body);
+  font-weight: var(--font-weight);
   text-transform: uppercase;
 }
 
@@ -80,12 +88,9 @@ section {
   letter-spacing: -9px;
 }
 
-.project-description{
-    font-size: 14px;
-  }
-
-
-
+.project-description {
+  font-size: 14px;
+}
 
 @media screen and (max-width: 1439px) {
   .font-head-number {
@@ -94,8 +99,6 @@ section {
     letter-spacing: -3px;
   }
 }
-
-
 
 @media screen and (max-width: 1279px) {
   .font-head-style {
@@ -119,7 +122,7 @@ section {
 }
 
 @media screen and (max-width: 909px) {
-  .rank-container{
+  .rank-container {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -128,11 +131,11 @@ section {
     gap: 14px;
   }
 
-  .up-gap{
+  .up-gap {
     margin-top: 35px;
   }
 
-  .font-head-style{
+  .font-head-style {
     padding-left: 5px;
   }
 }
@@ -154,23 +157,25 @@ section {
 }
 
 @media screen and (max-width: 529px) {
-  .font-head-style, .font-head-number {
+  .font-head-style,
+  .font-head-number {
     font-size: 48px;
     line-height: 45px;
     letter-spacing: -1px;
   }
 
-  body{
+  body {
     font-size: 14px;
   }
 
-  .project-description{
+  .project-description {
     font-size: 12px;
   }
 }
 
 @media screen and (max-width: 439px) {
-  .font-head-style, .font-head-number {
+  .font-head-style,
+  .font-head-number {
     font-size: 34px;
     line-height: 32px;
     letter-spacing: 0px;
@@ -179,12 +184,12 @@ section {
   .recharts-polar-angle-axis-tick text {
     font-size: 10px !important;
   }
-  
-  body{
+
+  body {
     font-size: 12px;
   }
-  
-  .project-description{
+
+  .project-description {
     font-size: 10px;
   }
 }

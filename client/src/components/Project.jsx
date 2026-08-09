@@ -15,7 +15,7 @@ const Project = () => {
           <div className="w-full h-full relative">
             <div className="absolute bottom-3.5 left-5">
               <h2 className="text-[#d3d3d3]">architect.io</h2>
-              <h3 className="text-[#525256] project-description line-clamp-2 text-ellipsis">
+              <h3 className="text-[#606060] project-description line-clamp-2 text-ellipsis">
                 AI full stack (MERN) webapp turns your idea into 2D architecture
                 plan
               </h3>
@@ -37,7 +37,7 @@ const Project = () => {
           <div className="w-full h-full relative">
             <div className="absolute bottom-3.5 left-5">
               <h2 className="text-[#d3d3d3]">architect.io</h2>
-              <h3 className="text-[#525256] project-description line-clamp-2 text-ellipsis">
+              <h3 className="text-[#606060] project-description line-clamp-2 text-ellipsis">
                 AI full stack (MERN) webapp turns your idea into 2D architecture
                 plan
               </h3>

@@ -94,7 +94,7 @@ const SEO = ({
     }
 
     // Theme
-    setMeta("name", "theme-color", theme === "dark" ? "#000000" : "#ffffff");
+    setMeta("name", "theme-color", theme === "dark" ? "#121212" : "#ffffff");
 
     // Canonical
     setLink("canonical", url);

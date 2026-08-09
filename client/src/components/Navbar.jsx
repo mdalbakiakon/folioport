@@ -77,6 +77,7 @@ const Navbar = ({ handleThemeDark, handleThemeLight, theme }) => {
         </nav>
 
         <button
+          aria-label="menu navbar button"
           onClick={handleMobileMenu}
           className="h-full flex justify-center items-center min-[529px]:hidden p-px"
         >
@@ -98,11 +99,13 @@ const Navbar = ({ handleThemeDark, handleThemeLight, theme }) => {
 
         <div className="absolute right-0 top-0 h-full flex justify-center items-center gap-x-1.25 p-px">
           <Sun
+            aria-label="light theme button"
             onClick={handleThemeLight}
             className={`h-2/3 cursor-pointer ${theme === "light" ? "text-(--txt-main)" : "text-(--txt-sec)"}`}
             fill={theme === "light" ? "#000000" : "none"}
           />
           <Moon
+            aria-label="dark theme button"
             onClick={handleThemeDark}
             className={`h-2/3 cursor-pointer ${theme === "dark" ? "text-(--txt-main)" : "text-(--txt-sec)"}`}
             fill={theme === "dark" ? "#d3d3d3" : "none"}
