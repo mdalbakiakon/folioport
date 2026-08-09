@@ -17,7 +17,7 @@ const skillData = [
   { skill: "System Design", value: 70 },
 ];
 
-const MOBILE_BREAKPOINT = 420;
+const MOBILE_BREAKPOINT = 480;
 
 const wrapLabel = (label, maxChars = 10) => {
   const words = label.split(" ");
