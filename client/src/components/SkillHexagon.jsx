@@ -47,7 +47,6 @@ const makeCustomTick = (isMobile) => ({ x, y, cx, cy, payload, textAnchor }) => 
   const oy = y + (dyRaw / dist) * offset;
 
   const entry = skillData.find((d) => d.skill === payload.value);
-  // Only wrap on narrow (mobile) containers — desktop keeps the full label on one line
   const lines = isMobile ? wrapLabel(payload.value) : [payload.value];
 
   return (
@@ -88,7 +87,7 @@ const SkillHexagon = () => {
     return () => observer.disconnect();
   }, []);
 
-
+  // Trigger animation only once the chart reaches the bottom 25% band of the actual viewport
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
@@ -101,8 +100,10 @@ const SkillHexagon = () => {
         }
       },
       {
-        threshold: 1, 
-        rootMargin: "0px 0px 75% 0px",
+        threshold: 0,
+        // Negative shrinks the root from the top by 75%, leaving only the
+        // bottom 25% strip of the real viewport as the active detection zone
+        rootMargin: "-75% 0px 0px 0px",
       }
     );
 
