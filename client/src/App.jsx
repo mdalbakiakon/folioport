@@ -12,6 +12,7 @@ import Layout from "./pages/Layout";
 
 import SEO from "./components/SEO";
 import { SEO_CONFIG } from "./config/seo.js";
+import ScrollToTop from "./components/ScrolltoTop.jsx";
 
 const App = () => {
   const [theme, setTheme] = useState(() => {
@@ -37,6 +38,7 @@ const App = () => {
 
   return (
     <ReactLenis root>
+      <ScrollToTop />
       <Routes>
         <Route
           element={
@@ -48,20 +50,14 @@ const App = () => {
           }
         >
           {/* Home */}
-          <Route
-            path="/"
-            element={<Home theme={theme} />}
-          />
+          <Route path="/" element={<Home theme={theme} />} />
 
           {/* Identity */}
           <Route
             path="/identity"
             element={
               <>
-                <SEO
-                  {...SEO_CONFIG.identity}
-                  theme={theme}
-                />
+                <SEO {...SEO_CONFIG.identity} theme={theme} />
                 <Identity theme={theme} />
               </>
             }
@@ -72,10 +68,7 @@ const App = () => {
             path="/archive"
             element={
               <>
-                <SEO
-                  {...SEO_CONFIG.archive}
-                  theme={theme}
-                />
+                <SEO {...SEO_CONFIG.archive} theme={theme} />
                 <Archive theme={theme} />
               </>
             }
@@ -86,10 +79,7 @@ const App = () => {
             path="/honor"
             element={
               <>
-                <SEO
-                  {...SEO_CONFIG.honor}
-                  theme={theme}
-                />
+                <SEO {...SEO_CONFIG.honor} theme={theme} />
                 <Honor theme={theme} />
               </>
             }
@@ -100,10 +90,7 @@ const App = () => {
             path="/contact"
             element={
               <>
-                <SEO
-                  {...SEO_CONFIG.contact}
-                  theme={theme}
-                />
+                <SEO {...SEO_CONFIG.contact} theme={theme} />
                 <Contact theme={theme} />
               </>
             }
@@ -115,10 +102,7 @@ const App = () => {
           path="*"
           element={
             <>
-              <SEO
-                {...SEO_CONFIG.notFound}
-                theme={theme}
-              />
+              <SEO {...SEO_CONFIG.notFound} theme={theme} />
               <PageNotFound theme={theme} />
             </>
           }
