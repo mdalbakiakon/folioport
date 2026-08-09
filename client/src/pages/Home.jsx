@@ -13,7 +13,7 @@ const Home = ({ theme }) => {
   return (
     <>
       {/* seo */}
-      <SEO {...SEO_CONFIG.home} theme={theme}/>
+      <SEO {...SEO_CONFIG.home} theme={theme} />
 
       <Identity />
 
@@ -39,14 +39,7 @@ const Home = ({ theme }) => {
         <SkillHexagon />
       </section>
       <Archive />
-      {/* building since */}
-      <section className="flex flex-col justify-center items-center">
-        <h2 className="font-head text-center text-3xl text-(--txt-ter) leading-[0.75] max-[439px]:text-base">
-          2022
-        </h2>
-        <h3 className="text-(--txt-main)">Since</h3>
-      </section>
-      <Honor />
+
       {/* branding */}
       <section className="flex flex-col justify-center items-center">
         <img
@@ -65,6 +58,17 @@ const Home = ({ theme }) => {
           }`}
         />
       </section>
+
+      <Honor />
+
+      {/* building since */}
+      <section className="flex flex-col justify-center items-center">
+        <h2 className="font-head text-center text-3xl text-(--txt-ter) leading-[0.75] max-[439px]:text-base">
+          2022
+        </h2>
+        <h3 className="text-(--txt-main)">Since</h3>
+      </section>
+
       <Contact />
       <Copyright />
     </>
