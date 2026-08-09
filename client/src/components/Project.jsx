@@ -2,7 +2,7 @@ import React from "react";
 
 const Project = () => {
   return (
-    <div className="w-full h-fit px-1.25 flex justify-center items-center gap-1.25 [@media(hover:none)]:flex-col">
+    <div className="w-full h-fit px-1.25 flex justify-center items-center gap-1 [@media(hover:none)]:flex-col">
       <div className="h-100 [@media(hover:none)]:h-75 flex-1 w-full hover:flex-2 transition-all duration-750 ease-in-out rounded-4xl overflow-hidden cursor-pointer group sticky top-22">
         <img
           src="/interior_main.jpg"
