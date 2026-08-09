@@ -38,6 +38,7 @@ const Home = ({ theme }) => {
 
         <SkillHexagon />
       </section>
+      
       <Archive />
 
       {/* branding */}
