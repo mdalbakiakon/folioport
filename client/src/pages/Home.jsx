@@ -20,10 +20,10 @@ const Home = ({ theme }) => {
       {/* portfolio version */}
       <section className="flex flex-col justify-start items-center">
         <div className="flex flex-col justify-center items-center p-1.25">
-          <h2 className="text-center lowercase text-3xl text-(--txt-ter) max-[439px]:text-base">
+          <h2 className="text-center select-none lowercase text-3xl text-(--txt-ter) max-[439px]:text-base">
             v8.1.31
           </h2>
-          <h3 className="text-(--txt-main)">Portfolio Mark</h3>
+          <h3 className="text-(--txt-main) select-none">Portfolio Mark</h3>
           <p className="mt-3.5 text-(--txt-sec) w-full max-w-7xl mx-auto text-center">
             I am a Full Stack Software Engineer specializing in the MERN stack,
             with a dedicated focus on architecting clean, scalable, and
@@ -42,7 +42,7 @@ const Home = ({ theme }) => {
       <Archive />
 
       {/* branding */}
-      <div className="flex flex-col justify-center items-center h-[calc(100dvh-78px)] p-2.5">
+      <div className="flex flex-col justify-center items-center h-[calc(100dvh-78px)] p-2.5 relative">
         <div className="w-full h-full rounded-4xl xl:rounded-[50px] overflow-hidden relative">
           <img
             src="/branding.jpg"
@@ -59,7 +59,7 @@ const Home = ({ theme }) => {
         <img
           src="/logo-light.svg"
           alt="Portfolio Logo"
-          className={`absolute w-7.5 py-1.25 transition-opacity duration-750 ease-in-out ${
+          className={`absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-7.5 py-1.25 transition-opacity duration-750 ease-in-out ${
             theme === "dark" ? "opacity-0" : "opacity-100"
           }`}
         />
@@ -67,7 +67,7 @@ const Home = ({ theme }) => {
         <img
           src="/logo-dark.svg"
           alt="Portfolio Logo"
-          className={`absolute w-7.5 py-1.25 transition-opacity duration-750 ease-in-out ${
+          className={`absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-7.5 py-1.25 transition-opacity duration-750 ease-in-out ${
             theme === "dark" ? "opacity-100" : "opacity-0"
           }`}
         />
@@ -76,7 +76,7 @@ const Home = ({ theme }) => {
       <Honor />
 
       {/* building since */}
-      <section className="flex flex-col justify-center items-center">
+      <section className="flex flex-col justify-center items-center select-none">
         <h2 className="font-head text-center text-3xl text-(--txt-ter) leading-[0.75] max-[439px]:text-base">
           2022
         </h2>

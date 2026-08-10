@@ -30,7 +30,7 @@ const Identity = ({theme}) => {
             loading="eager"
             className="w-30 aspect-square rounded-3xl object-center object-cover -scale-x-100 select-none"
           />
-          <div className="flex-1">Md. Al Baki Akon</div>
+          <div className="flex-1 select-text">Md. Al Baki Akon</div>
           <div className="flex-3 flex flex-col gap-3.5 justify-center items-start">
             <div className="flex flex-col text-(--txt-sec)">
               <h2 className="text-(--txt-main) select-none">Services</h2>
@@ -46,7 +46,7 @@ const Identity = ({theme}) => {
             </div>
           </div>
           <div className="flex-1 text-(--txt-sec) text-right max-[909px]:hidden">
-            <span className="font-head text-lg text-(--txt-ter) leading-[0.75]">
+            <span className="font-head text-lg text-(--txt-ter) leading-[0.75] select-none">
               {currYear}
             </span>
           </div>

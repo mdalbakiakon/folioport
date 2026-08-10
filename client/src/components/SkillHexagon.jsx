@@ -114,7 +114,7 @@ const SkillHexagon = () => {
   return (
     <div
       ref={containerRef}
-      className="w-full h-100 px-1.25 outline-none focus:outline-none **:outline-none flex justify-center items-center"
+      className="w-full h-100 px-1.25 outline-none focus:outline-none **:outline-none flex justify-center items-center select-none"
     >
       <ResponsiveContainer width="100%" height="100%">
         <RadarChart

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Sun, Moon, GamepadDirectional } from "lucide-react";
 import MobileNav from "./MobileNav";
+import ScrollToTop from "./ScrolltoTop";
+import { useLenis } from "lenis/react";
 
 const Navbar = ({ handleThemeDark, handleThemeLight, theme }) => {
   const location = useLocation();
@@ -11,6 +13,16 @@ const Navbar = ({ handleThemeDark, handleThemeLight, theme }) => {
   const isHonor = location.pathname === "/honor";
   const isContact = location.pathname === "/contact";
 
+  const lenis = useLenis();
+
+  const handleScrollTop = () => {
+    if (lenis) {
+      lenis.scrollTo(0, { immediate: false });
+    } else {
+      window.scrollTo(0, 0);
+    }
+  };
+
   const [isMenuClick, setIsMenuClick] = useState(false);
 
   const handleMobileMenu = () => {
@@ -18,23 +30,24 @@ const Navbar = ({ handleThemeDark, handleThemeLight, theme }) => {
   };
 
   return (
-    <header className="sticky top-0 bg-(--bg-main) w-full h-19.5 flex flex-col justify-center items-center z-50">
+    <header className="sticky top-0 bg-(--bg-main) w-full h-19.5 flex flex-col justify-center items-center z-50 select-none">
       <div className="w-[calc(100%-20px)] h-full mx-auto border-b-2 border-(--txt-ter) flex justify-center items-center">
         <Link
+          onClick={() => (isHome ? handleScrollTop() : null)}
           to="/"
           className="relative w-7.5 h-10 flex items-center justify-center"
         >
           <img
             src="/logo-light.svg"
-            alt="Portfolio Logo"
-            className={`absolute w-7.5 py-1.25 transition-opacity duration-750 ease-in-out ${
+            alt="Md. Al Baki Akon - Portfolio Logo"
+            className={`absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-7.5 py-1.25 transition-opacity duration-750 ease-in-out ${
               theme === "dark" ? "opacity-0" : "opacity-100"
             }`}
           />
 
           <img
             src="/logo-dark.svg"
-            alt="Portfolio Logo"
+            alt="Md. Al Baki Akon - Portfolio Logo"
             className={`absolute w-7.5 py-1.25 transition-opacity duration-750 ease-in-out ${
               theme === "dark" ? "opacity-100" : "opacity-0"
             }`}

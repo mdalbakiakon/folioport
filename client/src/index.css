@@ -59,6 +59,11 @@ body::-webkit-scrollbar-thumb {
   border-radius: 4px;
 }
 
+body::selection{
+  background-color: #FFD54F;
+  color: #121212;
+}
+
 section {
   width: 100%;
   min-height: calc(100dvh - 78px);

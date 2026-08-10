@@ -4,11 +4,11 @@ const Research = () => {
   return (
     <>
       <div className="w-full h-fit flex justify-between items-start gap-2.5 px-1.25 rank-container">
-        <div className="flex-1 text-left">LLM Research</div>
+        <div className="flex-1 text-left select-none">LLM Research</div>
         <div className="flex-3 flex flex-col gap-3.5 justify-center items-start">
           <div className="flex flex-col">
             <h2 className="text-(--txt-main) select-none">Outline</h2>
-            <p className="text-(--txt-sec)">
+            <p className="text-(--txt-sec) select-text">
               A-RICD is a resource-efficient method for reducing hallucinations
               in large language models. It replaces the need for two separate
               models with a single LoRA adapter, and introduces per-question
@@ -18,16 +18,17 @@ const Research = () => {
           </div>
           <div className="flex flex-col">
             <h2 className="text-(--txt-main) select-none">Title</h2>
-            <span className="text-(--txt-sec)">
+            <span className="text-(--txt-sec) select-text">
               A-RICD: Adapter-based Resource-efficient Induce-then-Contrast
               Decoding for Reducing Hallucinations in Large Language Models.
             </span>
           </div>
         </div>
-        <div className="flex-1 text-(--txt-sec) text-right flex flex-col">
+        <div className="flex-1 text-(--txt-sec) text-right flex flex-col select-none">
           <a
             href="https://github.com/mdalbakiakon/A-RICD"
             target="_blank"
+            rel="noopener noreferrer"
             className="text-(--txt-main) hover:text-(--txt-sec)"
           >
             Source
@@ -36,7 +37,7 @@ const Research = () => {
       </div>
 
       {/* research performance */}
-      <div className="mt-25 w-full h-fit flex flex-col justify-center items-start gap-2.5 px-1.25">
+      <div className="mt-25 w-full h-fit flex flex-col justify-center items-start gap-2.5 px-1.25 select-none">
         <h2>
           Case Performance{" "}
           <span className="text-(--txt-sec)">
