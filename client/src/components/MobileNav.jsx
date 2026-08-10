@@ -69,7 +69,7 @@ const MobileNav = ({
           fetchPriority="high"
           decoding="sync"
           className={`absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-2/3 py-1.25 z-10 blur-sm select-none transition-opacity duration-50 ease-out ${
-            theme === "dark" ? "opacity-0" : "opacity-85"
+            theme === "dark" ? "opacity-0" : "opacity-50"
           }`}
         />
 
