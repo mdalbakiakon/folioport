@@ -53,7 +53,7 @@ const MobileNav = ({
       <img
         src="/logo-light.svg"
         alt="Portfolio Logo"
-        className={`absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-2/3 py-1.25 z-10 transition-opacity blur-sm duration-50 ease-in-out ${
+        className={`absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-2/3 py-1.25 z-10 transition-opacity blur-sm duration-50 select-none ease-in-out ${
           theme === "dark" ? "opacity-0" : "opacity-85"
         }`}
       />
@@ -61,7 +61,7 @@ const MobileNav = ({
       <img
         src="/logo-dark.svg"
         alt="Portfolio Logo"
-        className={`absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-2/3 py-1.25 z-10 transition-opacity blur-sm duration-50 ease-in-out ${
+        className={`absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-2/3 py-1.25 z-10 transition-opacity blur-sm duration-50 select-none ease-in-out ${
           theme === "dark" ? "opacity-50" : "opacity-0"
         }`}
       />
