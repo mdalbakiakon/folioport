@@ -10,9 +10,8 @@ const MobileNav = ({
   handleMobileMenu,
   theme,
 }) => {
-  
   const [isVisible, setIsVisible] = useState(false);
-  
+
   useEffect(() => {
     const timer = setTimeout(() => setIsVisible(true), 250);
     return () => clearTimeout(timer);
@@ -68,17 +67,19 @@ const MobileNav = ({
           alt="Md. Al Baki Akon - Portfolio Logo"
           loading="eager"
           fetchPriority="high"
-          className={`absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-2/3 py-1.25 z-10 transition-opacity blur-sm duration-50 select-none ease-in-out ${
+          decoding="sync"
+          className={`absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-2/3 py-1.25 z-10 blur-sm select-none transition-opacity duration-50 ease-out ${
             theme === "dark" ? "opacity-0" : "opacity-85"
           }`}
         />
 
         <img
           src="/logo-dark.svg"
-          alt="d. Al Baki Akon - Portfolio Logo"
+          alt="Md. Al Baki Akon - Portfolio Logo"
           loading="eager"
           fetchPriority="high"
-          className={`absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-2/3 py-1.25 z-10 transition-opacity blur-sm duration-50 select-none ease-in-out ${
+          decoding="sync"
+          className={`absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-2/3 py-1.25 z-10 blur-sm select-none transition-opacity duration-50 ease-out ${
             theme === "dark" ? "opacity-50" : "opacity-0"
           }`}
         />

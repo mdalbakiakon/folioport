@@ -40,6 +40,9 @@ const Navbar = ({ handleThemeDark, handleThemeLight, theme }) => {
           <img
             src="/logo-light.svg"
             alt="Md. Al Baki Akon - Portfolio Logo"
+            loading="eager"
+            fetchPriority="high"
+            decoding="sync"
             className={`absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-7.5 py-1.25 transition-opacity duration-750 ease-in-out ${
               theme === "dark" ? "opacity-0" : "opacity-100"
             }`}
@@ -48,6 +51,9 @@ const Navbar = ({ handleThemeDark, handleThemeLight, theme }) => {
           <img
             src="/logo-dark.svg"
             alt="Md. Al Baki Akon - Portfolio Logo"
+            loading="eager"
+            fetchPriority="high"
+            decoding="sync"
             className={`absolute w-7.5 py-1.25 transition-opacity duration-750 ease-in-out ${
               theme === "dark" ? "opacity-100" : "opacity-0"
             }`}
