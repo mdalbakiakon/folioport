@@ -102,7 +102,7 @@ const Navbar = ({ handleThemeDark, handleThemeLight, theme }) => {
             aria-label="light theme button"
             onClick={handleThemeLight}
             className={`h-2/3 cursor-pointer ${theme === "light" ? "text-(--txt-main)" : "text-(--txt-sec)"}`}
-            fill={theme === "light" ? "#000000" : "none"}
+            fill={theme === "light" ? "#121212" : "none"}
           />
           <Moon
             aria-label="dark theme button"
