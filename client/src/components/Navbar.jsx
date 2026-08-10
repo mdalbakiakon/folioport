@@ -107,6 +107,7 @@ const Navbar = ({ handleThemeDark, handleThemeLight, theme }) => {
             isHonor={isHonor}
             isContact={isContact}
             handleMobileMenu={handleMobileMenu}
+            theme={theme}
           />
         )}
 
