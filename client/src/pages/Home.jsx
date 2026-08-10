@@ -42,7 +42,7 @@ const Home = ({ theme }) => {
       <Archive />
 
       {/* branding */}
-      <div className="flex flex-col justify-center items-center h-[calc(100dvh-78px)] p-2.5 relative">
+      <div className="flex flex-col justify-center items-center h-[calc(100svh-78px)] p-2.5 relative">
         <div className="w-full h-full rounded-4xl xl:rounded-[50px] overflow-hidden relative">
           <img
             src="/branding.jpg"
@@ -59,6 +59,8 @@ const Home = ({ theme }) => {
         <img
           src="/logo-light.svg"
           alt="Portfolio Logo"
+          loading="lazy"
+          decoding="async"
           className={`absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-7.5 py-1.25 transition-opacity duration-750 ease-in-out ${
             theme === "dark" ? "opacity-0" : "opacity-100"
           }`}
@@ -67,6 +69,8 @@ const Home = ({ theme }) => {
         <img
           src="/logo-dark.svg"
           alt="Portfolio Logo"
+          loading="lazy"
+          decoding="async"
           className={`absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-7.5 py-1.25 transition-opacity duration-750 ease-in-out ${
             theme === "dark" ? "opacity-100" : "opacity-0"
           }`}

@@ -3,7 +3,7 @@ import React from "react";
 const PageNotFound = ({ theme }) => {
   return (
     <>
-      <div className="w-full h-dvh p-1.25 relative">
+      <div className="w-full h-svh p-1.25 relative">
         <h1 className="font-head-style text-left">404</h1>
         <h2 className="px-1.25">Page not found</h2>
 

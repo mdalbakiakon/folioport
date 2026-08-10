@@ -15,26 +15,6 @@ import { SEO_CONFIG } from "./config/seo.js";
 import ScrollToTop from "./components/ScrolltoTop.jsx";
 
 const App = () => {
-  // State to track mobile status (defaults to false for SSR safety)
-  const [isMobile, setIsMobile] = useState(false);
-
-  // Detect screen size on client-side mount
-  useEffect(() => {
-    const checkMobile = () => {
-      // Set breakpoint to 768px (standard tablet/mobile cutoff)
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    // Run immediately on mount
-    checkMobile();
-
-    // Listen for resize events (e.g., rotating a tablet)
-    window.addEventListener("resize", checkMobile);
-
-    // Cleanup listener on unmount
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-
   // Theme Logic
   const [theme, setTheme] = useState(() => {
     return localStorage.getItem("baki-portfolio-theme") || "dark";
@@ -125,15 +105,6 @@ const App = () => {
       />
     </Routes>
   );
-
-  if (isMobile) {
-    return (
-      <>
-        <ScrollToTop />
-        {routes}
-      </>
-    );
-  }
 
   return (
     <ReactLenis
