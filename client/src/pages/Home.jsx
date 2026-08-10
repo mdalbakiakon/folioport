@@ -20,8 +20,8 @@ const Home = ({ theme }) => {
       {/* portfolio version */}
       <section className="flex flex-col justify-start items-center">
         <div className="flex flex-col justify-center items-center p-1.25">
-          <h2 className="font-head text-center text-3xl text-(--txt-ter) max-[439px]:text-base">
-            8.0
+          <h2 className="text-center lowercase text-3xl text-(--txt-ter) max-[439px]:text-base">
+            v8.1.31
           </h2>
           <h3 className="text-(--txt-main)">Portfolio Mark</h3>
           <p className="mt-3.5 text-(--txt-sec) w-full max-w-7xl mx-auto text-center">
