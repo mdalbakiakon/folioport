@@ -14,7 +14,7 @@ const MobileNav = ({
   const [isVisible, setIsVisible] = useState(false);
   
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 50);
+    const timer = setTimeout(() => setIsVisible(true), 250);
     return () => clearTimeout(timer);
   }, []);
 
