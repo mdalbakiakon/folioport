@@ -17,13 +17,13 @@ const Archive = ({theme}) => {
         <div className="flex-1 w-full flex flex-col justify-between items-center gap-50">
           {/* projecct section */}
           <div className="w-full">
-            <h2 className="text-(--txt-main) px-1.25 mb-2.5">Case Project</h2>
+            <h2 className="text-(--txt-main) px-1.25 mb-2.5 select-none">Case Project</h2>
             <Project />
           </div>
 
           {/* research section */}
           <div>
-            <h2 className="text-(--txt-main) px-1.25 mb-2.5">Case Research</h2>
+            <h2 className="text-(--txt-main) px-1.25 mb-2.5 select-none">Case Research</h2>
             <Research />
           </div>
         </div>
