@@ -57,33 +57,6 @@ const MobileNav = ({
         </Link>
       </nav>
 
-      <div
-        className={`w-full h-full absolute top-0 left-0 transition-opacity duration-750 ease-out ${
-          isVisible ? "opacity-100" : "opacity-0"
-        }`}
-      >
-        <img
-          src="/logo-light.svg"
-          alt="Md. Al Baki Akon - Portfolio Logo"
-          loading="eager"
-          fetchPriority="high"
-          decoding="sync"
-          className={`absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-2/3 py-1.25 z-10 blur-sm select-none transition-opacity duration-50 ease-out ${
-            theme === "dark" ? "opacity-0" : "opacity-50"
-          }`}
-        />
-
-        <img
-          src="/logo-dark.svg"
-          alt="Md. Al Baki Akon - Portfolio Logo"
-          loading="eager"
-          fetchPriority="high"
-          decoding="sync"
-          className={`absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-2/3 py-1.25 z-10 blur-sm select-none transition-opacity duration-50 ease-out ${
-            theme === "dark" ? "opacity-50" : "opacity-0"
-          }`}
-        />
-      </div>
     </section>
   );
 };
