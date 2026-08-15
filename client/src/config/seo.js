@@ -2,7 +2,7 @@ const SITE_NAME = "Md. Al Baki Akon";
 
 export const SEO_CONFIG = {
   home: {
-    title: `${SITE_NAME} — Full Stack Software Engineer`,
+    title: `${SITE_NAME} - Full Stack Software Engineer`,
     description:
       "Md. Al Baki Akon is a Full Stack Software Engineer focused on building thoughtful, modern, and reliable digital experiences.",
     path: "/",
@@ -26,7 +26,7 @@ export const SEO_CONFIG = {
   },
 
   identity: {
-    title: `Identity — ${SITE_NAME}`,
+    title: `Identity - ${SITE_NAME}`,
     description:
       "Discover the identity, background, interests, and perspective of Md. Al Baki Akon, a Full Stack Software Engineer.",
     path: "/identity",
@@ -47,7 +47,7 @@ export const SEO_CONFIG = {
   },
 
   archive: {
-    title: `Archive — ${SITE_NAME}`,
+    title: `Archive - ${SITE_NAME}`,
     description:
       "Explore the archive of Md. Al Baki Akon, featuring selected work, projects, experiences, and other creations.",
     path: "/archive",
@@ -66,7 +66,7 @@ export const SEO_CONFIG = {
   },
 
   honor: {
-    title: `Honor — ${SITE_NAME}`,
+    title: `Honor - ${SITE_NAME}`,
     description:
       "A collection of honors, achievements, recognition, and milestones from Md. Al Baki Akon's journey as a Full Stack Software Engineer.",
     path: "/honor",
@@ -83,7 +83,7 @@ export const SEO_CONFIG = {
   },
 
   contact: {
-    title: `Contact — ${SITE_NAME}`,
+    title: `Contact - ${SITE_NAME}`,
     description:
       "Get in touch with Md. Al Baki Akon for software engineering opportunities, collaborations, projects, and professional conversations.",
     path: "/contact",
@@ -102,7 +102,7 @@ export const SEO_CONFIG = {
   },
 
   notFound: {
-    title: `Page Not Found — ${SITE_NAME}`,
+    title: `Page Not Found - ${SITE_NAME}`,
     description:
       "The page you are looking for could not be found. Return to the portfolio of Md. Al Baki Akon.",
     path: "/404",
