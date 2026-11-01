@@ -50,7 +50,7 @@
 @utility text-header-style {
   @apply font-head text-foreground text-left tracking-tight universal-margin-top select-none;
 
-  @apply text-[clamp(2rem,-0.17rem+10.83vw,8.5rem)] leading-[0.85];
+  @apply text-[clamp(2.25rem,-0.17rem+10.83vw,8.5rem)] leading-[clamp(2rem,-0.02rem+9.05vw,7.225rem)];
 }
 
 @utility text-body-style {
