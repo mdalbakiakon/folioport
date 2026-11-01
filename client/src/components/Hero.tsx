@@ -1,12 +1,10 @@
 import Image from "next/image";
 import { HeadTxt } from "./HeadTxt";
-
-const year = new Date();
+import { Year } from "./Year";
 
 export function Hero() {
   return (
     <section>
-      
       <HeadTxt headline1="Portfolio" headline2="Website" />
 
       <div className="flex flex-col md:flex-row justify-between items-start w-full gap-2 universal-margin-top">
@@ -15,10 +13,8 @@ export function Hero() {
             src="/hero.webp"
             alt="Md. Al Baki Akon"
             priority
-            fetchPriority="high"
-            decoding="async"
-            unoptimized
             fill
+            sizes="(max-width: 768px) 120px, 480px"
             className="object-center object-cover"
           />
         </div>
@@ -40,7 +36,7 @@ export function Hero() {
           </div>
         </div>
         <span className="select-none text-body-style">
-          {year.getFullYear()}
+          <Year />
         </span>
       </div>
     </section>
