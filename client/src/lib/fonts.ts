@@ -4,10 +4,12 @@ export const fontHead = localFont({
   src: "../fonts/micro.woff2",
   variable: "--font-head-loaded",
   display: "swap",
+  preload: true,
 });
 
 export const fontBody = localFont({
   src: "../fonts/iMedium.woff2",
   variable: "--font-body-loaded",
   display: "swap",
+  preload: true,
 });
