@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+:root {
+  font-size: max(1rem, 0.8333vw);
+  --background: #ffffff;
+  --foreground: #171717;
+  --bg-sec: #f4f4f5;
+  --txt-sec: #a3a3a3;
+  --txt-ter: #6b6b6bcc;
+  --head-border: #d4d4d890;
+  --body-pad: 0.625rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000000;
+    --foreground: #ffffff;
+    --bg-sec: #161616;
+    --txt-sec: #767676;
+    --head-border: #76767695;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-bg-sec: var(--bg-sec);
+  --color-txt-sec: var(--txt-sec);
+  --color-head-border: var(--head-border);
+  --font-head: var(--font-head-loaded);
+  --font-body: var(--font-body-loaded);
+}
+
+@layer base {
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    padding: var(--body-pad);
+  }
+}
+
+@utility universal-margin-top {
+  @apply mt-1;
+}
+
+@utility universal-gap {
+  @apply gap-1;
+}
+
+@utility text-header-style {
+  @apply font-head text-foreground text-left tracking-tight universal-margin-top select-none;
+
+  @apply text-[clamp(2rem,-0.17rem+10.83vw,8.5rem)] leading-[0.85];
+}
+
+@utility text-body-style {
+  @apply font-body text-foreground;
+}
+
+@utility text-body-sec-style {
+  @apply font-body text-txt-sec;
+}
+
+@utility header-style {
+  @apply w-full border-b-2 border-head-border h-12;
+}
+
+::selection {
+  @apply bg-amber-300;
+}
+
+@media (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+}
