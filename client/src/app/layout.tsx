@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { fontHead, fontBody } from "@/lib/fonts";
 import "./globals.css";
-import CustomCursor from "@/ui/CustomCursor";
+import CustomCursor from "@/components/ui/CustomCursor";
 import { Navbar } from "../components/Navbar";
 
 export const metadata: Metadata = {
