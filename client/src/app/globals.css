@@ -9,6 +9,7 @@
   --txt-ter: #6b6b6bcc;
   --head-border: #d4d4d890;
   --body-pad: 0.625rem;
+  --navbar-h: 3rem
 }
 
 @media (prefers-color-scheme: dark) {
@@ -39,16 +40,8 @@
   }
 }
 
-@utility universal-margin-top {
-  @apply mt-1;
-}
-
-@utility universal-gap {
-  @apply gap-1;
-}
-
 @utility text-header-style {
-  @apply font-head text-foreground text-left tracking-tight universal-margin-top select-none;
+  @apply font-head text-foreground text-left tracking-tight select-none;
 
   @apply text-[clamp(2.25rem,-0.17rem+10.83vw,8.5rem)] leading-[clamp(2rem,-0.02rem+9.05vw,7.225rem)];
 }
@@ -62,7 +55,7 @@
 }
 
 @utility header-style {
-  @apply w-full border-b-2 border-head-border h-12;
+  @apply w-full border-b-2 border-head-border h-(--navbar-h);
 }
 
 ::selection {

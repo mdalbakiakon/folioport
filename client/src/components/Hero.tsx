@@ -1,13 +1,14 @@
 import Image from "next/image";
 import { HeadTxt } from "./HeadTxt";
 import { Year } from "./Year";
+import Button from "./ui/Button";
 
 export function Hero() {
   return (
-    <section>
+    <section className="relative min-h-[calc(100svh-var(--navbar-h)-2*var(--body-pad))] flex flex-col">
       <HeadTxt headline1="Portfolio" headline2="Website" />
 
-      <div className="flex flex-col md:flex-row justify-between items-start w-full gap-2 universal-margin-top">
+      <div className="flex flex-col md:flex-row justify-between items-start w-full gap-2">
         <div className="w-30 aspect-square relative rounded-4xl overflow-hidden select-none">
           <Image
             src="/hero.webp"
@@ -38,6 +39,13 @@ export function Hero() {
         <span className="select-none text-body-style">
           <Year />
         </span>
+      </div>
+
+      <div className="w-full h-full flex-1 flex justify-start md:justify-center items-end gap-0 pb-5 mt-7.5">
+        <Button size="md">Resume</Button>
+        <Button variant="secondary" size="md">
+          Contact
+        </Button>
       </div>
     </section>
   );
