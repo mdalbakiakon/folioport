@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { fontHead, fontBody } from "@/lib/fonts";
 import "./globals.css";
 import CustomCursor from "@/ui/CustomCursor";
+import { Navbar } from "../components/Navbar";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +17,8 @@ export default function RootLayout({ children }: Props) {
   return (
     <html lang="en" className={`${fontHead.variable} ${fontBody.variable}`}>
       <body className="text-body-sec-style">
-        {children}
+        <Navbar />
+        <main>{children}</main>
         <CustomCursor />
       </body>
     </html>
