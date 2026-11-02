@@ -41,7 +41,7 @@
 }
 
 @utility text-header-style {
-  @apply font-head text-foreground text-left tracking-tight select-none;
+  @apply font-head text-foreground text-left tracking-tight select-none my-1;
 
   @apply text-[clamp(2.25rem,-0.17rem+10.83vw,8.5rem)] leading-[clamp(2rem,-0.02rem+9.05vw,7.225rem)];
 }
