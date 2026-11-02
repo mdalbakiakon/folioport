@@ -3,6 +3,7 @@ import { fontHead, fontBody } from "@/lib/fonts";
 import "./globals.css";
 import CustomCursor from "@/components/ui/CustomCursor";
 import { Navbar } from "../components/Navbar";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: Props) {
         <Navbar />
         <main>{children}</main>
         <CustomCursor />
+        <Analytics />
       </body>
     </html>
   );
