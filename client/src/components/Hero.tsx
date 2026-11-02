@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { HeadTxt } from "./HeadTxt";
 import { Year } from "./Year";
-import Button from "./ui/Button";
+import { Button } from "./ui/Button";
 
 export function Hero() {
   return (
@@ -18,6 +18,7 @@ export function Hero() {
             sizes="(max-width: 768px) 120px, 480px"
             className="object-center object-cover"
           />
+          <div className="absolute inset-0"></div>
         </div>
 
         <h2 className="flex-1 select-none text-body-style">Md. Al Baki Akon</h2>

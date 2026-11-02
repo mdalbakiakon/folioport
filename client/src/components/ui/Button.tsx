@@ -31,6 +31,7 @@ const TEXT_COLOR = {
 } as const;
 
 const SIZE = {
+  xs: "px-6 py-1.25 text-xs mx-2",
   sm: "px-6 py-2 text-xs mx-2",
   md: "px-6 py-1.5 text-sm mx-2",
 } as const;
@@ -42,7 +43,7 @@ type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
   size?: keyof typeof SIZE;
 };
 
-export default function Button({
+export function Button({
   variant = "primary",
   size = "sm",
   className = "",

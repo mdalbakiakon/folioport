@@ -9,14 +9,14 @@
   --txt-ter: #6b6b6bcc;
   --head-border: #d4d4d890;
   --body-pad: 0.625rem;
-  --navbar-h: 3rem
+  --navbar-h: 4rem;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #000000;
     --foreground: #ffffff;
-    --bg-sec: #161616;
+    --bg-sec: #222222;
     --txt-sec: #767676;
     --head-border: #76767695;
   }
@@ -55,7 +55,7 @@
 }
 
 @utility header-style {
-  @apply w-full border-b-2 border-head-border h-(--navbar-h);
+  @apply w-full border-y-2 border-head-border h-(--navbar-h);
 }
 
 ::selection {
