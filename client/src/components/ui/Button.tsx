@@ -2,7 +2,7 @@ import type { ButtonHTMLAttributes } from "react";
 
 const BASE =
   "group relative inline-flex items-center justify-center font-semibold " +
-  "transition-transform enabled:active:scale-95 " +
+  "transition-transform select-none enabled:active:scale-95 " +
   "focus-visible:outline-none " +
   "disabled:cursor-not-allowed disabled:opacity-50";
 
