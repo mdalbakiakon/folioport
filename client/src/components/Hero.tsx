@@ -15,7 +15,8 @@ export function Hero() {
             alt="Md. Al Baki Akon"
             priority
             fill
-            sizes="(max-width: 768px) 120px, 480px"
+            sizes="(min-width: 1920px) 6.25vw, 120px"
+            quality={95}
             className="object-center object-cover"
           />
           <div className="absolute inset-0"></div>
