@@ -43,7 +43,9 @@ export function Hero() {
       </div>
 
       <div className="w-full h-full flex-1 flex justify-start md:justify-center items-end gap-0 pb-5 mt-7.5">
-        <Button size="md">Resume</Button>
+        <a href="/resume.pdf" download="mdalbakiakon_resume.pdf">
+          <Button size="md">Resume</Button>
+        </a>
         <Button variant="secondary" size="md">
           Contact
         </Button>
